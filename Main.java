@@ -1,12 +1,14 @@
-/* ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½javaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
- * Ê¹ï¿½ï¿½javaï¿½ï¿½Scannerï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¨Stringï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
- * 2.ï¿½Þ¿Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½
- * case1ï¿½ï¿½
+/* Õë¶ÔÅ£¿ÍÍøÖÐ²¿·ÖÌâÄ¿µÄjava°æÊäÈë
+ * Ê¹ÓÃjavaµÄScanner¶ÁÈ¡¼üÅÌÊäÈë£¨StringÐÍ£©£¬Á½ÖÖÇé¿ö 
+ * 1.ÓÐ¿Õ¸ñÊäÈë
+ * 2.ÎÞ¿Õ¸ñÊäÈë
+ * Ê¹ÓÃstream×ª»»StringÐÍÊäÈëÎªintÊý×é
+ * case1£º
  * 5
  * 1 2 3 4 5
- * outï¿½ï¿½
+ * out£º
  * [1, 2, 3, 4, 5]
- * case2ï¿½ï¿½
+ * case2£º
  * 5
  * 12345
  * [1, 2, 3, 4, 5]
@@ -19,7 +21,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ N K
+		// Á½¸öÊäÈë N K
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		sc.nextLine();
@@ -27,10 +29,10 @@ public class Main {
 		sc.close();
 		int num[] = new int[N];
 		if (inum.contains(" ")) {
-			// ï¿½ï¿½ï¿½Ð¿Õ¸ï¿½Ê¹ï¿½ï¿½
+			// ÈôÓÐ¿Õ¸ñÊ¹ÓÃ
 			num = Arrays.stream(inum.split(" ")).mapToInt(Integer::parseInt).toArray();
 		} else {
-			// ï¿½Þ¿Õ¸ï¿½Ê¹ï¿½ï¿½
+			// ÎÞ¿Õ¸ñÊ¹ÓÃ
 			num = inum.chars().map(i -> i - '0').toArray();
 		}
 		System.out.println(Arrays.toString(num));
